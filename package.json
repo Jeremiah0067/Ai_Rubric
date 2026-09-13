@@ -4,6 +4,6 @@
   "private": true,
   "description": "Live demo: AI-assisted grading tool for teachers, backed by a free Vercel serverless function and the Gemini API.",
   "scripts": {
-    "dev": "vercel dev"
+    "dev": "netlify dev"
   }
 }
