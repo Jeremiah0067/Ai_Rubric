@@ -1,0 +1,9 @@
+{
+  "name": "ai-grading-assistant",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Live demo: AI-assisted grading tool for teachers, backed by a free Vercel serverless function and the Gemini API.",
+  "scripts": {
+    "dev": "vercel dev"
+  }
+}
