@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AI-Assisted Grading Assistant</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <span class="live-dot"></span>
+  <span class="kicker">LIVE · REAL AI GRADING</span>
+  <h1>AI-Assisted Grading Assistant</h1>
+</div>
+
+<div class="wrap">
+  <div class="grid">
+
+    <!-- LEFT: Setup -->
+    <div>
+      <div class="panel">
+        <h2>1 · Marking Guide</h2>
+        <p class="sub">Set the rubric the AI will grade against.</p>
+        <div id="criteria-list"></div>
+        <button class="add-criterion" id="add-criterion-btn">+ Add criterion</button>
+      </div>
+
+      <div class="panel">
+        <h2>2 · Student's Work</h2>
+        <p class="sub">Upload a photo of the handwritten answer.</p>
+        <div id="upload-area">
+          <div class="dropzone" id="dropzone">
+            <svg viewBox="0 0 24 24"><path d="M9 16h6v-6h4l-7-7-7 7h4v6zm-4 2h14v2H5v-2z"/></svg>
+            <div class="dz-title">Tap to upload or take a photo</div>
+            <div class="dz-sub">JPG or PNG of the assignment</div>
+          </div>
+          <input type="file" id="file-input" accept="image/*" capture="environment" style="display:none">
+        </div>
+        <div class="privacy-note">🔒 Image is sent to the grading API for this session only — nothing is stored afterward.</div>
+      </div>
+
+      <button class="grade-btn" id="grade-btn" disabled>Grade This Assignment</button>
+    </div>
+
+    <!-- RIGHT: Results -->
+    <div class="panel" id="results-panel" style="min-height:400px;">
+      <div class="empty-state" id="empty-state">
+        <svg viewBox="0 0 24 24"><path d="M9 16h6v-6h4l-7-7-7 7h4v6zm-4 2h14v2H5v-2z"/></svg>
+        <div class="et">Waiting for an assignment</div>
+        <div>Set your rubric, upload a photo, and hit grade.</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
